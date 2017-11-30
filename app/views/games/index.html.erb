@@ -1,0 +1,19 @@
+<h2 class='center'>Games</h2>
+<hr />
+
+<div class='row'>
+  <div class='col s12 m6'>
+    <button class='btn' id='toggle'>Show Form</button>
+    <ul id='games-list'>
+      <% @games.each do |game| %>
+        <%= render partial: 'game', locals: { game: game } %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='col s12 m6' id='character-list'>
+    <h2 id='games'>Characters in Game</h2>
+    <ul id='characters'>
+    </ul>
+  </div>
+</div>
